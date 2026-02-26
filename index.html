@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wheel Spinner | PickSpin Style</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-icon">🎡</span>
+          <span class="brand-text">Wheel Spinner</span>
+        </div>
+        <div class="header-tag">Inspired by PickSpin</div>
+      </header>
+
+      <main class="layout">
+        <section class="wheel-section">
+          <div class="wheel-wrapper">
+            <div class="wheel-shell">
+              <canvas
+                id="wheelCanvas"
+                width="480"
+                height="480"
+                aria-label="Wheel spinner"
+              ></canvas>
+              <div class="wheel-pointer" aria-hidden="true"></div>
+            </div>
+            <button id="spinBtn" class="primary-btn">🎡 SPIN</button>
+            <div id="result" class="result-text" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="entries-section">
+          <h2 class="panel-title">Wheel Entries</h2>
+          <div class="entry-input-row">
+            <input
+              id="optionInput"
+              class="text-input"
+              placeholder="输入一个选项后按回车或点添加"
+            />
+            <button id="addBtn" class="secondary-btn">添加</button>
+          </div>
+          <div class="entry-actions">
+            <button id="addExampleBtn" class="ghost-btn">加载示例</button>
+            <button id="clearBtn" class="ghost-btn danger">清空全部</button>
+          </div>
+          <ul id="optionList" class="entry-list"></ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
